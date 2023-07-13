@@ -1,12 +1,12 @@
 <template>
   <div>
     <BContainer class="bg-yellow d-flex flex-column pt-1" fluid>
-      <BRow class="mt-5 pt-5 mx-5 mb-3">
+      <BRow class="mt-5 pt-5 mx-sm-5 mb-3">
         <h1>All Breeds</h1>
         <p class="fs-4 d-flex"><span class="bg-white">✨Find your next pet-ner based on their breed 🐶</span></p>
       </BRow>
-      <BRow class="mx-5">
-        <BCol cols="2" class="mb-3" v-for="breed in breedList" :key="breed.name">
+      <BRow class="mx-sm-5">
+        <BCol cols="6" md="4" lg="3" xl="2" class="mb-3 px-1 px-md-2" v-for="breed in breedList" :key="breed.name">
           <DogCard 
             :name="breed.name"
             :img-src="breed.image"

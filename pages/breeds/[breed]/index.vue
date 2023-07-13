@@ -1,12 +1,12 @@
 <template>
   <div>
     <BContainer class="bg-yellow d-flex flex-column pt-1" fluid>
-      <BRow class="mt-5 pt-5 mx-5 mb-3">
+      <BRow class="mt-5 pt-5 mx-sm-5 mb-3">
         <h1>All Breeds / {{ breed }}</h1>
         <p class="fs-4 d-flex"><span class="bg-white">✨Pick the best <span class="fw-bold">{{ breed }}</span>. Only in our shop 🐶</span></p>
       </BRow>
-      <BRow v-if="subbreedList.length === 0" class="mx-5">
-        <BCol cols="2" class="mb-3" v-for="dog in dogList" :key="dog.name">
+      <BRow v-if="subbreedList.length === 0" class="mx-sm-5">
+        <BCol cols="6" md="4" lg="3" xl="2" class="mb-3 px-1 px-md-2" v-for="dog in dogList" :key="dog.name">
           <DogCard 
             :name="dog.name"
             :img-src="dog.image"
@@ -18,7 +18,7 @@
           />
         </BCol>
       </BRow>
-      <BRow v-else class="mx-5 flex-grow-1">
+      <BRow v-else class="mx-sm-5 flex-grow-1">
         <BCarousel :interval="2500" controls indicators ride="carousel">
           <BCarouselSlide 
             v-for="slide in slideList" 

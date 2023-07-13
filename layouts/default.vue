@@ -7,7 +7,7 @@
       </BNavbarBrand>
       <BNavbarToggle target="nav-collapse" />
       <BCollapse id="nav-collapse" is-nav>
-        <BNavbarNav class="mx-auto d-flex gap-5">
+        <BNavbarNav class="mx-auto d-flex gap-1 gap-md-2 gap-lg-5">
           <BNavItem to="/">Home</BNavItem>
           <BNavItem to="/breeds">Explore</BNavItem>
           <BNavItem to="/about">About</BNavItem>
