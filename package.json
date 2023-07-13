@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@iconify-json/mdi": "^1.1.53",
+    "unique-names-generator": "^4.7.1",
     "vue-writer": "^1.2.0"
   }
 }

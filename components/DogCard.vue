@@ -1,6 +1,6 @@
 <template>
   <BCard
-    :img-src="imgSrc"
+    :img-src="realImgSrc"
     :img-alt="name"
     :img-width="200"
     :img-height="200"
@@ -20,7 +20,7 @@
     </BCardText>
     <template #footer>
       <div class="d-grid gap-2">
-        <BButton class="bg-dark-blue">See More</BButton>
+        <BButton class="bg-dark-blue" @click="onLoadMoreClicked">{{ buttonText }}</BButton>
       </div>
     </template>
   </BCard>
@@ -28,13 +28,29 @@
 
 <script setup>
   import IMdiStarCircle from '~icons/mdi/star-circle'
-  const { name, imgSrc, startPrice, endPrice, review } = defineProps({
+
+  const { name, imgSrc, startPrice, endPrice, review, isImgDirect, buttonText } = defineProps({
     name: String,
     imgSrc: String,
     startPrice: String,
     endPrice: String,
-    review: Number
+    review: Number,
+    isImgDirect: Boolean,
+    buttonText: String
   })
+
+  const emit = defineEmits(['loadMoreClick'])
+  const onLoadMoreClicked = () => {
+    emit('loadMoreClick')
+  }
+
+  const realImgSrc = ref("")
+  if (isImgDirect) {
+    realImgSrc.value = imgSrc
+  } else {
+    const { data:image, error } = await useFetch(imgSrc)
+    realImgSrc.value = image.value.message
+  }
 </script>
 
 <style scoped>
