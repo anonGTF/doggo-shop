@@ -15,7 +15,7 @@
             :review="breed.review"
             :is-img-direct="false"
             button-text="See more"
-            @loadMoreClick="openModal(breed)"
+            @btnClick="openModal(breed)"
           />
         </BCol>
       </BRow>

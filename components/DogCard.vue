@@ -20,7 +20,7 @@
     </BCardText>
     <template #footer>
       <div class="d-grid gap-2">
-        <BButton class="bg-dark-blue" @click="onLoadMoreClicked">{{ buttonText }}</BButton>
+        <BButton class="bg-dark-blue" @click="onBtnClicked">{{ buttonText }}</BButton>
       </div>
     </template>
   </BCard>
@@ -39,9 +39,9 @@
     buttonText: String
   })
 
-  const emit = defineEmits(['loadMoreClick'])
-  const onLoadMoreClicked = () => {
-    emit('loadMoreClick')
+  const emit = defineEmits(['btnClick'])
+  const onBtnClicked = () => {
+    emit('btnClick')
   }
 
   const realImgSrc = ref("")
