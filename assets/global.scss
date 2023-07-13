@@ -1,0 +1,43 @@
+.bg-yellow {
+  background-color: #FED135 !important;
+}
+.text-yellow {
+  color:#FED135 !important;
+}
+.bg-dark-blue {
+  background-color: #101E4A !important;
+}
+.is-typed {
+  span.cursor {
+    display: inline-block;
+    width: 3px;
+    height: 70%;
+    background-color: black;
+    animation: blink 1s infinite;
+
+    .typing {
+      animation: none;
+    }
+  }
+
+  span.underscore {
+    display: inline-flex;
+    width: 10px;
+    height: 1px;
+    align-items: flex-end;
+    background-color: black;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    49% {
+      background-color: black;
+    }
+    50% {
+      background-color: transparent;
+    }
+    99% {
+      background-color: transparent;
+    }
+  }
+}
