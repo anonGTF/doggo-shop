@@ -25,6 +25,14 @@
 <script setup>
   import { uniqueNamesGenerator, names } from 'unique-names-generator'
   const { breed, subbreed } = useRoute().params
+
+  useHead({
+    title: `DoggoShop | ${subbreed}`,
+    meta: [
+      { name: 'description', content: `The best ${subbreed} in your area.` }
+    ]
+  })
+
   const dogList = ref([])
   const { data: imageResponse, error } = await useFetch(`https://dog.ceo/api/breed/${breed}/${subbreed}/images/random/24`)
   

@@ -26,6 +26,13 @@
 <script setup>
   import VueWriter from 'vue-writer'
 
+  useHead({
+    title: 'DoggoShop',
+    meta: [
+      { name: 'description', content: 'The best dog shop in your area.' }
+    ]
+  })
+
   const dogList = ref([
     "affenpinscher.",
     "basenji.",

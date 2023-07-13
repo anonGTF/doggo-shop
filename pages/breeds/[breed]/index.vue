@@ -48,6 +48,13 @@
   import { uniqueNamesGenerator, names } from 'unique-names-generator'
   const { breed } = useRoute().params
 
+  useHead({
+    title: `DoggoShop | ${breed}`,
+    meta: [
+      { name: 'description', content: `The best ${breed} in your area.` }
+    ]
+  })
+
   const dogList = ref([])
   const slideList = ref([])
 

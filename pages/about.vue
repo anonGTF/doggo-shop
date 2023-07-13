@@ -18,7 +18,12 @@
 </template>
 
 <script setup>
-
+  useHead({
+    title: 'DoggoShop | about',
+    meta: [
+      { name: 'description', content: 'About the best dog shop in your area.' }
+    ]
+  })
 </script>
 
 <style lang="scss" scoped>

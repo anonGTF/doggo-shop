@@ -82,6 +82,13 @@
 
 <script setup>
   import IMdiStarCircle from '~icons/mdi/star-circle'
+
+  useHead({
+    title: 'DoggoShop | Breed list',
+    meta: [
+      { name: 'description', content: 'The best breed list of dog in your area.' }
+    ]
+  })
   
   const breedList = ref([])
   const { data: breedsResponse, error } = await useFetch("https://dog.ceo/api/breeds/list/all")
